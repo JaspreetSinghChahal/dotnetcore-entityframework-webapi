@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.2.0" />
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="MediatR" Version="8.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Autobot.Data.Model\Autobot.Data.Models.csproj" />
+    <ProjectReference Include="..\Autobot.Data\Autobot.Data.csproj" />
+    <ProjectReference Include="..\Autobot.Infrastructure\Autobot.Infrastructure.csproj" />
+    <ProjectReference Include="..\Autobot.Models\Autobot.Models.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AssemblyName>Autobot</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="PromotionImages\**" />
+    <Content Remove="PromotionImages\**" />
+    <EmbeddedResource Remove="PromotionImages\**" />
+    <None Remove="PromotionImages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".platform\nginx\conf.d\myconfig.conf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.2.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.2" />
+    <PackageReference Include="MediatR" Version="8.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+    <PackageReference Include="SkiaSharp.QrCode" Version="0.3.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Autobot.Commands\Autobot.Commands.csproj" />
+    <ProjectReference Include="..\Autobot.Data\Autobot.Data.csproj" />
+    <ProjectReference Include="..\Autobot.Infrastructure\Autobot.Infrastructure.csproj" />
+    <ProjectReference Include="..\Autobot.Queries\Autobot.Queries.csproj" />
+  </ItemGroup>
+
+</Project>
